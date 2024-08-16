@@ -1,0 +1,71 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34525.116
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CineNow.WebAPI", "CineNowAPI\CineNow.WebAPI.csproj", "{9B456644-08E4-4A1A-B93D-6F23D751926E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{87DE728F-2E77-4F3A-AC47-C6652194E8E5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{18CFB187-D327-46CC-A7A5-0EAE5467E5B4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{AEC494CC-54C9-4F47-8DEF-2BF41404EEB0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{38C5286C-F84D-4B61-89DA-51BC86B93E47}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CineNow.Domain", "CineNow.Domain\CineNow.Domain.csproj", "{E589D0DD-9D61-4274-9EC8-B32C19E5DC3C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CineNow.Application", "CineNow.Application\CineNow.Application.csproj", "{B6136EC2-927B-4EFD-9721-5F324BCC01EF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CineNow.Infrastructure", "CineNow.Infrastructure\CineNow.Infrastructure.csproj", "{E2A4BFBD-ED3B-4EC0-949A-FBD51174F2CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CineNow.Persistence", "CineNow.Persistence\CineNow.Persistence.csproj", "{AEA27656-26B4-4027-856D-27F1DB211F9D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CineNow.Shared", "CineNow.Shared\CineNow.Shared.csproj", "{FBC2C695-C437-474C-A842-4807917CA89C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9B456644-08E4-4A1A-B93D-6F23D751926E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B456644-08E4-4A1A-B93D-6F23D751926E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B456644-08E4-4A1A-B93D-6F23D751926E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B456644-08E4-4A1A-B93D-6F23D751926E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E589D0DD-9D61-4274-9EC8-B32C19E5DC3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E589D0DD-9D61-4274-9EC8-B32C19E5DC3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E589D0DD-9D61-4274-9EC8-B32C19E5DC3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E589D0DD-9D61-4274-9EC8-B32C19E5DC3C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6136EC2-927B-4EFD-9721-5F324BCC01EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6136EC2-927B-4EFD-9721-5F324BCC01EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6136EC2-927B-4EFD-9721-5F324BCC01EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6136EC2-927B-4EFD-9721-5F324BCC01EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2A4BFBD-ED3B-4EC0-949A-FBD51174F2CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2A4BFBD-ED3B-4EC0-949A-FBD51174F2CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2A4BFBD-ED3B-4EC0-949A-FBD51174F2CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2A4BFBD-ED3B-4EC0-949A-FBD51174F2CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AEA27656-26B4-4027-856D-27F1DB211F9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AEA27656-26B4-4027-856D-27F1DB211F9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AEA27656-26B4-4027-856D-27F1DB211F9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AEA27656-26B4-4027-856D-27F1DB211F9D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBC2C695-C437-474C-A842-4807917CA89C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBC2C695-C437-474C-A842-4807917CA89C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBC2C695-C437-474C-A842-4807917CA89C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBC2C695-C437-474C-A842-4807917CA89C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9B456644-08E4-4A1A-B93D-6F23D751926E} = {AEC494CC-54C9-4F47-8DEF-2BF41404EEB0}
+		{E589D0DD-9D61-4274-9EC8-B32C19E5DC3C} = {87DE728F-2E77-4F3A-AC47-C6652194E8E5}
+		{B6136EC2-927B-4EFD-9721-5F324BCC01EF} = {87DE728F-2E77-4F3A-AC47-C6652194E8E5}
+		{E2A4BFBD-ED3B-4EC0-949A-FBD51174F2CC} = {18CFB187-D327-46CC-A7A5-0EAE5467E5B4}
+		{AEA27656-26B4-4027-856D-27F1DB211F9D} = {18CFB187-D327-46CC-A7A5-0EAE5467E5B4}
+		{FBC2C695-C437-474C-A842-4807917CA89C} = {38C5286C-F84D-4B61-89DA-51BC86B93E47}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5933A073-29FD-41EB-A2C2-FDF37799EF13}
+	EndGlobalSection
+EndGlobal

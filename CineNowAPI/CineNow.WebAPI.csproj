@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <InvariantGlobalization>false</InvariantGlobalization>
+    <UserSecretsId>519cfd91-9e41-4645-86c8-ea4e4a6e5eff</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Mediatr" Version="12.2.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.7">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="6.0.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CineNow.Application\CineNow.Application.csproj" />
+    <ProjectReference Include="..\CineNow.Domain\CineNow.Domain.csproj" />
+    <ProjectReference Include="..\CineNow.Infrastructure\CineNow.Infrastructure.csproj" />
+    <ProjectReference Include="..\CineNow.Persistence\CineNow.Persistence.csproj" />
+    <ProjectReference Include="..\CineNow.Shared\CineNow.Shared.csproj" />
+  </ItemGroup>
+
+</Project>
