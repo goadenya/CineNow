@@ -1,4 +1,5 @@
 ﻿using CineNow.Shared.Interfaces;
+using System.Text.Json.Serialization;
 
 namespace CineNow.Shared
 {
@@ -11,7 +12,8 @@ namespace CineNow.Shared
         public T Data { get; set; }
 
         //public List<ValidationResult> ValidationErrors { get; set; }
-
+        
+        [JsonIgnore]
         public Exception Exception { get; set; }
 
         public int Code { get; set; }
