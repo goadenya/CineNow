@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using CineNow.Application.Common.Mappings;
 using CineNow.Application.Interfaces.Repositories;
+using CineNow.Domain.Common.Enums;
 using CineNow.Domain.Entities;
 using CineNow.Shared;
 using MediatR;
@@ -61,7 +62,7 @@ namespace CineNow.Application.Features.Movies.Commands.CreateMovie
 
             await _unitOfWork.Repository<Movie>().AddAsync(movie);
             movie.AddDomainEvent(new MovieCreatedEvent(movie));
-            await _unitOfWork.Save(cancellationToken);
+            await _unitOfWork.SaveAsync(cancellationToken);
             return await Result<int>.SuccessAsync(movie.Id, "Movie Created.");
         }
     }

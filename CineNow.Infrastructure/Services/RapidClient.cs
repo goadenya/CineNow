@@ -1,5 +1,5 @@
 ﻿using CineNow.Application.DTOs;
-using CineNow.Application.Interfaces.MoviesService;
+using CineNow.Application.Interfaces.RapidMovieService;
 using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;

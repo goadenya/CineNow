@@ -1,4 +1,5 @@
 ﻿using CineNow.Application.DTOs;
+using CineNow.Application.Features.Movies.Commands.ImportMovies;
 using CineNow.Application.Features.Movies.Queries.GetAllMovies;
 using CineNow.Application.Features.Movies.Queries.GetMovieById;
 using CineNow.Application.Features.Movies.Queries.GetMoviesWithPagination;
@@ -18,6 +19,12 @@ namespace CineNowAPI.Controllers
         public MoviesController(IMediator mediator)
         {
             _mediator = mediator;
+        }
+
+        [HttpGet("import")]
+        public async Task<ActionResult<Result<List<int>>>> ImportMovies()
+        {
+            return await _mediator.Send(new ImportMoviesCommand());
         }
 
         [HttpGet]

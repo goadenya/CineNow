@@ -1,6 +1,6 @@
-@CineNowAPI_HostAddress = http://localhost:5029
+@CineNowAPI_HostAddress = https://localhost:7213
 
-GET {{CineNowAPI_HostAddress}}/weatherforecast/
+GET {{CineNowAPI_HostAddress}}/api/movies/
 Accept: application/json
 
 ###

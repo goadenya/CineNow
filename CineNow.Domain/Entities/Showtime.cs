@@ -1,4 +1,5 @@
 ﻿using CineNow.Domain.Common;
+using CineNow.Domain.Common.Enums;
 
 namespace CineNow.Domain.Entities
 {
@@ -13,28 +14,5 @@ namespace CineNow.Domain.Entities
         public int? TheaterId { get; set; }
         public Language? AudioLanguage { get; set; }
         public Language? SubtitleLanguage { get; set; }
-    }
-    public enum Language
-    {
-        None = 0,
-        English,
-        Swedish,
-        Finnish,
-        Norwegian,
-        Danish,
-        German,
-        Dutch,
-        French,
-        Italian,
-        Spanish,
-        Portuguese,
-        Turkish,
-        Persian,
-        Arabic,
-        Hindi,
-        Urdu,
-        ChineseMandarin,
-        Korean,
-        Japanese,
     }
 }

@@ -1,4 +1,5 @@
-﻿using CineNow.Application.Extensions.Interfaces;
+﻿using CineNow.Application.Configurations;
+using CineNow.Application.Extensions.Interfaces;
 using FluentValidation;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
@@ -27,6 +28,11 @@ namespace CineNow.Application.Extensions.Interfaces
         private static void AddValidators(this IServiceCollection services)
         {
             services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
+        }
+
+        private static void AddConfigs(this IServiceCollection services)
+        {
+            services.Configure<MovieConfig>(Configuration.GetSection("MovieConfig"));
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿using CineNow.Application.Interfaces.MoviesService;
+﻿using CineNow.Application.Interfaces.RapidMovieService;
 using CineNow.Domain.Common.Interfaces;
 using CineNow.Domain.Common;
 using CineNow.Infrastructure.Services;

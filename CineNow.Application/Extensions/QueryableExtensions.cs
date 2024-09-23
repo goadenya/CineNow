@@ -5,12 +5,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Linq.Dynamic.Core;
+using CineNow.Domain.Common.Constants;
 
 namespace CineNow.Application.Extensions
 {
     public static class QueryableExtensions
     {
-        public static async Task<PaginatedResult<T>> ToPaginatedListAsync<T>(this IQueryable<T> source, int pageNumber, int pageSize, CancellationToken cancellationToken) where T : class
+        public static async Task<PaginatedResult<T>> ToPaginatedListAsync<T>(this IQueryable<T> source, int pageNumber, int pageSize, string orderOption, CancellationToken cancellationToken) where T : class
         {
             pageNumber = pageNumber == 0 ? 1 : pageNumber;
 
@@ -20,9 +22,17 @@ namespace CineNow.Application.Extensions
 
             pageNumber = pageNumber <= 0 ? 1 : pageNumber;
 
-            List<T> items = await source.Skip((pageNumber - 1) * pageSize).Take(pageSize).ToListAsync(cancellationToken);
+            List<T> items = await source.OrderBy(OrderOption.Movie.GetOrderOption(orderOption)).Skip((pageNumber - 1) * pageSize).Take(pageSize).ToListAsync(cancellationToken);
 
             return PaginatedResult<T>.Create(items, count, pageNumber, pageSize);
+        }
+    }
+
+    public static class EnumExtensions
+    {
+        public static string GetNameAsString<T>(this Enum e)
+        {
+            return e.ToString();
         }
     }
 }

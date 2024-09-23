@@ -27,12 +27,25 @@ namespace CineNow.Persistence.Repositories
             return entity;
         }
 
+        public async Task<List<T>> AddRangeAsync(List<T> entities)
+        {
+            await _dbContext.Set<T>().AddRangeAsync(entities);
+            return entities;
+        }
+
         public Task UpdateAsync(T entity)
         {
             T exist = _dbContext.Set<T>().Find(entity.Id);
             _dbContext.Entry(exist).CurrentValues.SetValues(entity);
             return Task.CompletedTask;
         }
+
+        public Task UpdateRangeAsync(List<T> entities)
+        {
+            _dbContext.UpdateRange(entities);
+            return Task.CompletedTask;
+        }
+
         public async Task<List<T>> GetAllAsync()
         {
             return await _dbContext

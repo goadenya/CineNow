@@ -1,4 +1,5 @@
 ﻿using CineNow.Application.Common.Mappings;
+using CineNow.Domain.Common.Enums;
 using CineNow.Domain.Entities;
 
 namespace CineNow.Application.Features.Movies.Queries.GetMovieById

@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CineNow.Application.Interfaces.MoviesService
+namespace CineNow.Application.Interfaces.RapidMovieService
 {
     public interface IRapidClient
     {

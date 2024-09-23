@@ -11,6 +11,14 @@ namespace CineNow.Application.Features.Movies.Queries.GetMoviesWithPagination
     {
         public GetMoviesWithPaginationValidator()
         {
+            var orderOptionConditions = new List<string>() 
+            {
+                "Latest",
+                "Title",
+                "Rank",
+                "Rating",
+            };
+
             RuleFor(x => x.PageNumber)
                 .GreaterThanOrEqualTo(1)
                 .WithMessage("PageNumber at least greater than or equal to 1.");
@@ -18,6 +26,10 @@ namespace CineNow.Application.Features.Movies.Queries.GetMoviesWithPagination
             RuleFor(x => x.PageSize)
                 .GreaterThanOrEqualTo(1)
                 .WithMessage("PageSize at least greater than or equal to 1.");
+
+            RuleFor(x => x.OrderOption)
+                .Must(x => orderOptionConditions.Contains(x, StringComparer.OrdinalIgnoreCase))
+                .WithMessage("Order option value must be one of following: " + string.Join(", ", orderOptionConditions));
         }
     }
 }

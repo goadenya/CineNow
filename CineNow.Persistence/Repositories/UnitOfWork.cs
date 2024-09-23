@@ -47,7 +47,7 @@ namespace CineNow.Persistence.Repositories
             return Task.CompletedTask;
         }
 
-        public async Task<int> Save(CancellationToken cancellationToken)
+        public async Task<int> SaveAsync(CancellationToken cancellationToken)
         {
             return await _dbContext.SaveChangesAsync(cancellationToken);
         }
